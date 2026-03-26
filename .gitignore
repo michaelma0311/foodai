@@ -2,7 +2,7 @@
 food-101/
 recipe_dataset.zip
 *.zip
-
+recipe_dataset/
 # FAISS index and database
 *.idx
 *.sqlite3
@@ -15,3 +15,7 @@ __pycache__/
 
 # VS Code
 .vscode/
+recipe_faiss_index_full.idx
+recipe_metadata.sqlite3
+recipe_metadata_full.pkl
+recipe_faiss_index.idx
