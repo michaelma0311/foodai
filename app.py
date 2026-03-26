@@ -5,6 +5,7 @@ Localhost model using Flask that provdes web interface
 from flask import Flask, render_template, request, jsonify
 from rag_modal_query import ModalRecipeRAG
 import json
+import os
 from google import genai
 
 app = Flask(__name__)
@@ -81,7 +82,7 @@ def get_substitutions():
         return jsonify({'error': 'No ingredients provided'}), 400
 
     try:
-        client = genai.Client(api_key="AIzaSyAinIyitInaxHK3fsZpgN-hEcyJgIQe4jU")
+        client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
 
         prompt = f"""The user has these ingredients: {', '.join(ingredients)}.
 For each ingredient, suggest the top 2 common cooking substitutions.
