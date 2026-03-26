@@ -1,0 +1,17 @@
+# Datasets and large files
+food-101/
+recipe_dataset.zip
+*.zip
+
+# FAISS index and database
+*.idx
+*.sqlite3
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# VS Code
+.vscode/
